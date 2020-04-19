@@ -275,7 +275,11 @@ async function acquireRWindows(version: string): Promise<string> {
 }
 
 async function acquireRtools(version: string) {
-  let fileName: string = util.format("Rtools%s.exe", version);
+  if (version.startsWith("4")) {
+    let fileName = util.format("Rtools%s-x86_64.exe", version);
+  } else {
+    let fileName = util.format("Rtools%s.exe", version);
+  }
   let downloadUrl: string = util.format(
     "http://cloud.r-project.org/bin/windows/Rtools/%s",
     fileName

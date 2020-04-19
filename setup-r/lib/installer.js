@@ -290,7 +290,11 @@ function acquireRWindows(version) {
 }
 function acquireRtools(version) {
     return __awaiter(this, void 0, void 0, function* () {
-        let fileName = util.format("Rtools%s.exe", version);
+        if (version.startsWith("4")) {
+            let fileName = util.format("Rtools%s-x86_64.exe", version);
+        } else {
+            let fileName = util.format("Rtools%s.exe", version);
+        }
         let downloadUrl = util.format("http://cloud.r-project.org/bin/windows/Rtools/%s", fileName);
         let downloadPath = null;
         try {
