@@ -291,7 +291,7 @@ function acquireRWindows(version) {
 function acquireRtools(version) {
     return __awaiter(this, void 0, void 0, function* () {
         if (version.startsWith("4")) {
-            let fileName = util.format("Rtools%s-x86_64.exe", version);
+            let fileName = util.format("rtools%s-x86_64.exe", version);
         } else {
             let fileName = util.format("Rtools%s.exe", version);
         }

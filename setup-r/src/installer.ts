@@ -276,7 +276,7 @@ async function acquireRWindows(version: string): Promise<string> {
 
 async function acquireRtools(version: string) {
   if (version.startsWith("4")) {
-    let fileName = util.format("Rtools%s-x86_64.exe", version);
+    let fileName = util.format("rtools%s-x86_64.exe", version);
   } else {
     let fileName = util.format("Rtools%s.exe", version);
   }
